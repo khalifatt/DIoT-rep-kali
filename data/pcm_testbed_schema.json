@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "framework": "PCM-Full",
+    "total_nodes": 500,
+    "total_edges": 15000,
+    "description": "Complete standardized JSON dataset schema representation for repository publication."
+  },
+  "nodes": [
+    {
+      "id": "v_spr_dc_001",
+      "type": "DomainController",
+      "os_version": "Windows Server 2022 Standard",
+      "baseline": "High",
+      "state_vector": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    {
+      "id": "v_spr_w10_042",
+      "type": "Workstation",
+      "os_version": "Windows 10 Build 19041",
+      "baseline": "Medium",
+      "state_vector": [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    }
+  ],
+  "edges": [
+    {
+      "source": "v_spr_w10_042",
+      "target": "v_spr_dc_001",
+      "permissions": ["GenericAll", "WriteDacl"],
+      "c_exploit": 2.52,
+      "delta_priv": 0.45,
+      "weight": 0.1786
+    }
+  ]
+}
