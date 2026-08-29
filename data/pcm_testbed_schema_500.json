@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "framework": "PCM-Full",
+    "total_nodes": 500,
+    "total_edges": 15000,
+    "description": "Complete 500-node heterogeneous enterprise testbed schema incorporating Domain Controllers, Windows 10/11/8/7, and Ubuntu 20.04 instances."
+  },
+  "nodes": [
+    {
+      "id": "v_spr_domaincontroller_001",
+      "type": "DomainController",
+      "os_version": "Windows Server 2022 Standard",
+      "baseline": "High",
+      "state_vector": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    {
+      "id": "v_spr_workstation_042",
+      "type": "Workstation",
+      "os_version": "Windows 10 Build 19041",
+      "baseline": "Medium",
+      "state_vector": [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    {
+      "id": "v_spr_workstation_215",
+      "type": "Workstation",
+      "os_version": "Windows 11 Build 22000",
+      "baseline": "High",
+      "state_vector": [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    {
+      "id": "v_spr_workstation_460",
+      "type": "Workstation",
+      "os_version": "Windows 8 Build 9200",
+      "baseline": "Low",
+      "state_vector": [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    {
+      "id": "v_spr_workstation_464",
+      "type": "Workstation",
+      "os_version": "Windows 7 Build 7601",
+      "baseline": "Low",
+      "state_vector": [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    {
+      "id": "v_spr_applicationserver_467",
+      "type": "ApplicationServer",
+      "os_version": "Ubuntu 20.04 LTS",
+      "baseline": "Medium",
+      "state_vector": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+    }
+  ],
+  "edges": [
+    {
+      "source": "v_spr_workstation_464",
+      "target": "v_spr_domaincontroller_001",
+      "permissions": ["GenericAll", "WriteDacl"],
+      "c_exploit": 1.68,
+      "delta_priv": 0.45,
+      "weight": 0.2344
+    },
+    {
+      "source": "v_spr_workstation_460",
+      "target": "v_spr_domaincontroller_001",
+      "permissions": ["GenericAll", "WriteDacl"],
+      "c_exploit": 1.68,
+      "delta_priv": 0.45,
+      "weight": 0.2344
+    }
+  ]
+}
