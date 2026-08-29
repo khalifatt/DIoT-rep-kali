@@ -1,0 +1,29 @@
+digraph PCM_Enterprise_Escalation {
+    rankdir=LR;
+    node [shape=box, style="filled,rounded", fontname="Arial", fontsize=10];
+    
+    subgraph cluster_workstations {
+        label = "Workstations (Windows 10/11)";
+        node [fillcolor=lightblue];
+        "v_spr_workstation_042" [label="Win10-WS-042\n(Medium Baseline)"];
+        "v_spr_workstation_215" [label="Win11-WS-215\n(High Baseline)"];
+    }
+
+    subgraph cluster_legacy {
+        label = "Legacy Nodes (Windows 7/8)";
+        node [fillcolor=lightpink];
+        "v_spr_workstation_464" [label="Win7-WS-464\n(Low Baseline)"];
+        "v_spr_workstation_460" [label="Win8-WS-460\n(Low Baseline)"];
+    }
+
+    subgraph cluster_dc {
+        label = "Domain Controllers";
+        node [fillcolor=gold];
+        "v_spr_domaincontroller_001" [label="WinServer-DC-001\n(SYSTEM Control)"];
+    }
+
+    "v_spr_workstation_464" -> "v_spr_domaincontroller_001" [label="GenericAll\n(Weight: 0.2344)", color=red, penwidth=2.0];
+    "v_spr_workstation_460" -> "v_spr_domaincontroller_001" [label="GenericAll\n(Weight: 0.2344)", color=red, penwidth=2.0];
+    "v_spr_workstation_042" -> "v_spr_domaincontroller_001" [label="WriteDacl\n(Weight: 0.1786)", color=orange, penwidth=1.5];
+    "v_spr_workstation_215" -> "v_spr_domaincontroller_001" [label="Config Vector\n(Weight: 0.1200)", color=blue, penwidth=1.0];
+}
