@@ -25,3 +25,7 @@ The testbed environment consists of 500 security-relevant nodes distributed acro
 - `src/pcm_graph_builder.py`: Automated generator script parsing Windows SDDL matrices and constructing the weighted directed graph $G = (V_{spr}, E_{are}, W)$.
 - `data/pcm_testbed_schema_500.json`: Complete dataset schema containing node states and Access Control Entries (NACLs) across the 500 nodes.
 - `configs/sddl_mappings.json`: Hex-encoded access mask mappings and baseline scaling parameters.
+
+**Tools:**
+- BloodHound (https://github.com/SpecterOps/BloodHound-Legacy)
+- https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
