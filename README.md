@@ -44,4 +44,3 @@ The testbed environment consists of exactly 500 security-relevant nodes distribu
 **Tools:**
 - BloodHound (https://github.com/SpecterOps/BloodHound-Legacy)
 - https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
- 
