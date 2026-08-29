@@ -39,6 +39,7 @@ The testbed environment consists of exactly 500 security-relevant nodes distribu
 - `data/pcm_testbed_schema_500.json`: Complete dataset schema containing node states and Access Control Entries (NACLs) across the 500 infrastructure nodes.
 - `configs/sddl_mappings.json`: Hex-encoded access mask mappings and baseline scaling parameters.
 - `configs/escalation_graph.dot`: Graphviz structural configuration for path visualization.
+- run_evaluation.sh: Automated execution script for end-to-end replication.
   
 **Tools:**
 - BloodHound (https://github.com/SpecterOps/BloodHound-Legacy)
