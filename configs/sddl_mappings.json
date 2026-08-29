@@ -1,0 +1,15 @@
+{
+  "access_mask_mappings": {
+    "0x00010000": "StandardDelete",
+    "0x00020000": "WriteDacl",
+    "0x00040000": "WriteOwner",
+    "0x00120196": "GenericRead",
+    "0x001301BF": "GenericAll",
+    "0x00F01FFF": "RegistryFullAccess"
+  },
+  "baseline_multipliers": {
+    "High": 1.5,
+    "Medium": 1.2,
+    "Low": 0.8
+  }
+}
