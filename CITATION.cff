@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software in your research, please cite it as below."
 authors:
-  - family-names: "Jean R. Dora"
+  - family-names: "Researchers"
     given-names: "Khalifatt"
 title: "Privilege Chain Modeling (PCM) Framework Data Validation Artifacts"
 version: 1.0.0
